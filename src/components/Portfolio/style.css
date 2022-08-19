@@ -1,0 +1,30 @@
+.portfolio-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  position: relative;
+  background-color: white;
+}
+
+.portfolio-image-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portfolio-image-container {
+  height: 200px;
+  width: 100px;
+}
+
+.see-more-button {
+  background-color: blueviolet !important;
+}
+
+.portfolio1 {
+  background-color: pink;
+  border-radius: 10px;
+  margin: 10px;
+}
