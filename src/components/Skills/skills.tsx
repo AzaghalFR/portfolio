@@ -5,7 +5,7 @@ export const Skills = () =>
 {
  return (
   <div style={{backgroundImage:`url(${BackgroundImage})`, backgroundAttachment:"fixed", backgroundPositionX:"center", backgroundPositionY:"20%", backgroundRepeat:"no-repeat", backgroundSize:"cover", minHeight:"100vh"}}>
-    <div style = {{height:"25vh", display:"flex", justifyContent:"center", alignItems:'center'}}>
+    <div style = {{height:"40vh", display:"flex", justifyContent:"center", alignItems:'center'}}>
     <Typography
             variant="h4"
             component="a"
@@ -21,24 +21,44 @@ export const Skills = () =>
             COMPETENCES
           </Typography>
     </div>
-    <div style={{backgroundColor: "white", width:"100%", display:"flex", flexDirection:"column", alignItems:"center"}}>
-      <div style={{position:"relative", marginBlock:50, width:"80%", display:"flex", justifyContent: "center"}}>
-        <p style={{backgroundColor: "#F7F2CA",  borderRadius:15, padding: 15, color:"grey", position:"absolute", top:-35, left: "-10%", alignSelf:"flex-start", width: 100, textAlign:"center"}}>Infographie</p>
-        <div style={{ backgroundColor:"#E5F6CD", padding: 20, borderRadius:10, width:"100%", alignSelf:"center", overflowWrap:"break-word"}}>
+    <div style={{backgroundColor: "lightcoral", width:"100%", display:"flex", flexDirection:"column", alignItems:"center", minHeight:'100vh'}}>
+      <div style={{position:"relative", marginBlock:50, width:"80%", display:"flex", justifyContent: "space-evenly", flexDirection:"row", flexWrap:"wrap"}}>
+        <div style={{ backgroundColor:"#FFFFFFAA",borderRadius:10, width: 250, alignSelf:"center", overflowWrap:"break-word", margin: 20}}>
+          <p style={{borderBottom:"1px solid grey", paddingBlock: 15,  top:0, width: '100%', textAlign:"center", margin:0}}>Infographie</p>
+          <div style= {{padding:20}}>
           <p>Photoshop/illustrator</p>
           <p>Suite Adobe</p>
           <p>Microsoft Office</p>
           <p> Créativité </p>
+          </div>
+        </div>
+        <div style={{ backgroundColor:"#FFFFFFAA",borderRadius:10, width: 250, alignSelf:"center", overflowWrap:"break-word", margin: 20}}>
+          <p style={{borderBottom:"1px solid grey", paddingBlock: 15,  top:0, width: '100%', textAlign:"center", margin:0}}>Infographie</p>
+          <div style= {{padding:20}}>
+          <p>Photoshop/illustrator</p>
+          <p>Suite Adobe</p>
+          <p>Microsoft Office</p>
+          <p> Créativité </p>
+          <p> Créativité </p>
+          <p> Créativité </p>
+          <p> Créativité </p>
+          <p> Créativité </p>
+
+          </div>
+        </div>
+        <div style={{ backgroundColor:"#FFFFFFAA",borderRadius:10, width: 250, alignSelf:"center", overflowWrap:"break-word", margin: 20}}>
+          <p style={{borderBottom:"1px solid grey", paddingBlock: 15,  top:0, width: '100%', textAlign:"center", margin:0}}>Infographie</p>
+          <div style= {{padding:20}}>
+          <p>Photoshop/illustrator</p>
+          <p>Suite Adobe</p>
+          <p>Microsoft Office</p>
+          <p> Créativité </p>
+          </div>
         </div>
       </div>
-      <div style={{position:"relative", marginBlock:50, width:"80%", display:"flex", justifyContent: "center"}}>
-        <p style={{backgroundColor: "#F7F2CA",  borderRadius:15, padding: 15, color:"grey", position:"absolute", top:-35, left: "-10%", alignSelf:"flex-start", width: 100, textAlign:"center"}}>Social</p>
-        <div style={{ backgroundColor:"#E5F6CD", padding: 20, borderRadius:10, width:"100%", alignSelf:"center", overflowWrap:"break-word"}}>
-          <p>Travail d'équipe</p>
-          <p>Polyvalence</p>
-          <p>discipline</p>
-          <p>Organisation</p>
-        </div>
+      <div style={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column', backgroundColor:"#4444FFAA",borderRadius:10,  alignSelf:"center",  margin: 20, height: 400, width:"80%", position:"relative"}}>
+        <h2 style={{position: 'absolute', top: -35}}>Mes centres d'interets</h2>
+        {/* <div style={{width: "80%", height: "100%"}}></div> */}
       </div>
     </div>
   </div>

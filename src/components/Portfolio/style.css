@@ -5,6 +5,7 @@
   padding-top: 20px;
   position: relative;
   background-color: white;
+  min-height: 100vh;
 }
 
 .portfolio-image-gallery {

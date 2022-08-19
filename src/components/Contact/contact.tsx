@@ -1,10 +1,13 @@
-import { TextField, Typography } from '@mui/material'
-import BackgroundImage from '../../assets/img/poisson1.jpg'
-
+import { TextField, Typography } from '@mui/material';
+import BackgroundImage from '../../assets/img/poisson1.jpg';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import { Dispatch, useEffect, useRef } from 'react';
+import { Document, pdfjs } from 'react-pdf';
 export let contactSectionRef: any;
+
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
 
 export const Contact = (props: {
   setSectionPosition:Dispatch<number>
@@ -19,7 +22,7 @@ useEffect(() => {
 }, [contactSectionRef]);
  return (
   <div ref={contactSectionRef} style={{backgroundImage:`url(${BackgroundImage})`, backgroundAttachment:"fixed", backgroundPositionX:"center", backgroundPositionY:"20%", backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
-    <div style = {{height:"25vh", display:"flex", justifyContent:"center", alignItems:'center'}}>
+    <div style = {{height:"40vh", display:"flex", justifyContent:"center", alignItems:'center'}}>
     <Typography
             variant="h4"
             component="a"
@@ -36,7 +39,10 @@ useEffect(() => {
           </Typography>
     </div>
     <div style={{ width:"100%", display:"flex", flexDirection:"row", alignItems:"center",justifyContent:"space-evenly", backgroundColor:'white', flexWrap:"wrap"}}>
-      <div style={{height: "50vh", width: "35vh", backgroundColor:"red", margin: 50}}>CV</div>
+      <div style={{height: "50vh", width: "40vh", margin: 50}}>
+      <Document file="../../assets/img/CV.pdf"></Document>
+
+      </div>
       <div style={{marginBottom:50}}>
         <div style={{display:"flex", flexDirection:"row", alignItems:"center"}}>
           <PhoneIcon/>
@@ -52,7 +58,7 @@ useEffect(() => {
         </div>
       </div>
     </div>
-    <div style = {{height:"25vh", display:"flex", justifyContent:"center", alignItems:'center'}}>
+    <div style = {{height:"40vh", display:"flex", justifyContent:"center", alignItems:'center'}}>
 </div>
   </div>
  )

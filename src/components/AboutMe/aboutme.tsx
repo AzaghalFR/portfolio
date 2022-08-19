@@ -14,11 +14,16 @@ useEffect(() => {
 }, [aboutSectionRef]);
  return (
    <div style= {{ display:"flex", justifyContent:"space-evenly", alignItems:"center", flexWrap:"wrap", flexDirection:"row", minHeight:"100vh"}} ref={aboutSectionRef}>
-      <img src={ThreshImage} height={450} />
+      <img 
+      style={{margin: 20}}
+      src={ThreshImage} 
+      width={window.innerHeight < window.innerWidth ? window.innerWidth * 0.3 : window.innerWidth *0.8} 
+      />
 
-    <div style={{position:"relative", marginBlock:50, maxWidth:"50%", display:"flex", justifyContent: "center"}}>
-      <p style={{backgroundColor: "#ECBBC3",  borderRadius:15, padding: 15, color:"grey", position:"absolute", top:-35, left: "-10%", alignSelf:"flex-start"}}>A propos de moi</p>
-      <div style={{backgroundColor:"#ECBBC3", padding: 20, borderRadius:10, maxWidth:"80%", alignSelf:"center", overflowWrap:"break-word"}}>
+    <div style={{position:"relative", marginBlock:50, padding: 20, maxWidth: window.innerHeight < window.innerWidth ? window.innerWidth * 0.3 : window.innerWidth *0.8, display:"flex", justifyContent: "center", flexDirection:'column', alignItems:"center"}}>
+      <h3 >Pour mieux me connaitre</h3>
+      <div style={{alignSelf:"center", overflowWrap:"break-word", fontSize: window.innerHeight > window.innerWidth ? 17 : 25
+    }}>
         <p>Bienvenue dans mon portfolio!</p>
         <p>Je m’appelle Adèle Fontanaud et je suis titulaire d'un DUT Métiers du Multimédia et de l'Internet (MMI) effectué à Angoulême.</p>
         <p>Après avoir passé une année en tant qu’animatrice en service civique au sein d’un EHPAD, je souhaite dorénavant trouver un travail dans lequel je pourrais m'épanouir.</p>
