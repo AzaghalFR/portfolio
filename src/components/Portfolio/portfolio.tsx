@@ -3,6 +3,17 @@ import { Dispatch, useEffect, useRef, useState } from "react";
 import "./style.css";
 import  Totoro from '../../assets/img/Totoro.jpg'
 import  ThreshImage from '../../assets/img/Thresh.png'
+import  DIYSImage from '../../assets/img/DIYS.png'
+import  Hwasa from '../../assets/img/Hwasa.png'
+import  Fille from '../../assets/img/Fille.png'
+import  Jenie from '../../assets/img/jenie.png'
+import  Rousse from '../../assets/img/Rousse.png'
+import  Vegie from '../../assets/img/vegie.png'
+import  TheOffice from '../../assets/img/TheOffice.png'
+import  Moi from '../../assets/img/Moi.png'
+
+
+
 import BackgroundImage from '../../assets/img/poisson2.jpg'
 export let portfolioSectionRef: any;
 
