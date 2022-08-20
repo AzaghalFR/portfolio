@@ -1,27 +1,22 @@
 import { Dispatch, LegacyRef, useEffect, useRef } from 'react'
-import  ThreshImage from '../../assets/img/noemie.jpg'
+import  AboutMePhoto from '../../assets/img/aboutmephoto.png'
+import AboutMeTitle from '../../assets/img/aboutme.png'
+export const AboutMe = (
 
-export const AboutMe = (props: {
-  setSectionPosition:Dispatch<number>
-}
   ) =>
 {
-  const { setSectionPosition} = props
-  const aboutSectionRef= useRef(null)
-useEffect(() => {
-  if (!aboutSectionRef) return;
-  setSectionPosition((aboutSectionRef?.current as any)?.offsetTop)
-}, [aboutSectionRef]);
+  
  return (
-   <div style= {{ display:"flex", justifyContent:"space-evenly", alignItems:"center", flexWrap:"wrap", flexDirection:"row", minHeight:"100vh"}} ref={aboutSectionRef}>
+   <div id="aboutme" style= {{ display:"flex", justifyContent:"space-evenly", alignItems:"center", flexWrap:"wrap", flexDirection:"row", minHeight:"100vh"}}>
       <img 
-      style={{marginTop: 40}}
-      src={ThreshImage} 
-      width={window.innerHeight < window.innerWidth ? window.innerWidth * 0.3 : window.innerWidth *0.8} 
+      style={{marginBlock: 40}}
+      src={AboutMePhoto} 
+      width={window.innerHeight < window.innerWidth ? window.innerWidth * 0.4 : window.innerWidth *0.8} 
       />
 
     <div style={{position:"relative", marginBlock:40, padding: 20, maxWidth: window.innerHeight < window.innerWidth ? window.innerWidth * 0.3 : window.innerWidth *0.8, display:"flex", justifyContent: "center", flexDirection:'column', alignItems:"center"}}>
-      <h3 >Pour mieux me connaitre</h3>
+      <img src={AboutMeTitle} width={ window.innerHeight < window.innerWidth ? window.innerWidth * 0.3 : window.innerWidth *0.6}/>
+
       <div style={{alignSelf:"center", overflowWrap:"break-word", fontSize: window.innerHeight > window.innerWidth ? 17 : 20
     }}>
         <p>Bienvenue dans mon portfolio!</p>

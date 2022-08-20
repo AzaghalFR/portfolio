@@ -2,47 +2,37 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Box, Button, Container, IconButton, Menu, MenuItem, Toolbar, Typography } from "@mui/material";
 import { title } from 'process';
 import { useState } from "react";
-
-export const Header = (props:{aboutSectionPosition:number, portfolioSectionPosition:number, contactSectionPosition:number}) =>
+import Button1 from '../../assets/img/contact.png';
+import Button2 from '../../assets/img/creations.png';
+import Button3 from '../../assets/img/contact.png';
+import ImageIcon from '@mui/icons-material/Image';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import EmailIcon from '@mui/icons-material/Email';
+export const Header = () =>
 {
-  const {aboutSectionPosition, portfolioSectionPosition, contactSectionPosition} = props;
-    const pages = [{title: 'A propos', offset:'aboutMe'}, {title: 'Mes créations', offset:'portfolio'}, {title: 'Contact', offset:'contact'}];
+    const pages = [{title: 'A propos', target:'aboutme', img:Button1, icon:<AccountCircleIcon/>}, {title: 'Mes créations', target:'portfolio', img:Button2, icon:<ImageIcon/>}, {title: 'Contact', target:'contact', img:Button3, icon:<EmailIcon/>}];
     const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
 
-  const handleCloseNavMenu = (page?: any) => {
-    if (page)
-    switch (page?.offset) {
-      case "aboutMe":
-      window.scrollTo({top: aboutSectionPosition+200, behavior:"smooth"})
-        
-        break;
-      case "portfolio":
-      window.scrollTo({top: portfolioSectionPosition+200, behavior:"smooth"})
-
-        break;
-      case "contact": 
-      window.scrollTo({top: contactSectionPosition+200, behavior:"smooth"})
-
-      break;
-      default:
-      window.scrollTo({top: 0, behavior:"smooth"})
-
-        break;
-    }
-    console.log(aboutSectionPosition, contactSectionPosition);
-
-    // if (page) {
-    //   window.scrollTo({top: portfolioSectionPosition, behavior:"smooth"})
-    // }
+  const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
+  const handleClick = (target:string) => {
+    const anchor = document.getElementById(target);
+    
+    if (anchor) {
+      window.scrollTo({top:anchor.offsetTop, behavior:"smooth"})
+    }
+    handleCloseNavMenu();
+};
+
+
  return (
-       <AppBar position='fixed' sx={{backgroundColor:"#FEE7F0", width: "100%"}}>
+       <AppBar position='fixed' sx={{backgroundColor: window.scrollY > 0 ?"#FFEBEE" : "transparent" , width: "100%", boxShadow: window.scrollY > 0 ? undefined : "none",}}>
        <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -53,7 +43,7 @@ export const Header = (props:{aboutSectionPosition:number, portfolioSectionPosit
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              fontFamily: 'baskervville',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
@@ -86,13 +76,13 @@ export const Header = (props:{aboutSectionPosition:number, portfolioSectionPosit
                 horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
-              onClose={()=>handleCloseNavMenu(null)}
+              onClose={()=>handleCloseNavMenu()}
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.title} onClick={()=> handleCloseNavMenu(page)}>
+                <MenuItem key={page.title} onClick={()=> handleClick(page.target)}>
                   <Typography textAlign="center">{page.title}</Typography>
                 </MenuItem>
               ))}
@@ -116,14 +106,20 @@ export const Header = (props:{aboutSectionPosition:number, portfolioSectionPosit
           >
             ADELE
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', marginLeft:20 } }}>
             {pages.map((page) => (
               <Button
                 key={page.title}
-                onClick={()=>handleCloseNavMenu(page)}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                onClick={() => handleClick(page.target)}
+                sx={{ my: 2, color: 'white', display: 'flex', alignItems:"center" }}
               >
-                {page.title}
+                {page.icon}
+                 <p style={{fontWeight: "bold", fontSize: 15, color:"#8C685E", margin:0, marginLeft:5}}>
+            {page.title}
+          </p>
+        {/* <img src={Button1} onClick={()=> console.log("button1")} height={20} style={{alignSelf:"center"}}/> */}
+
+                {/* {page.img} */}
               </Button>
             ))}
           </Box>
