@@ -15,14 +15,14 @@ useEffect(() => {
  return (
    <div style= {{ display:"flex", justifyContent:"space-evenly", alignItems:"center", flexWrap:"wrap", flexDirection:"row", minHeight:"100vh"}} ref={aboutSectionRef}>
       <img 
-      style={{margin: 20}}
+      style={{marginTop: 40}}
       src={ThreshImage} 
       width={window.innerHeight < window.innerWidth ? window.innerWidth * 0.3 : window.innerWidth *0.8} 
       />
 
-    <div style={{position:"relative", marginBlock:50, padding: 20, maxWidth: window.innerHeight < window.innerWidth ? window.innerWidth * 0.3 : window.innerWidth *0.8, display:"flex", justifyContent: "center", flexDirection:'column', alignItems:"center"}}>
+    <div style={{position:"relative", marginBlock:40, padding: 20, maxWidth: window.innerHeight < window.innerWidth ? window.innerWidth * 0.3 : window.innerWidth *0.8, display:"flex", justifyContent: "center", flexDirection:'column', alignItems:"center"}}>
       <h3 >Pour mieux me connaitre</h3>
-      <div style={{alignSelf:"center", overflowWrap:"break-word", fontSize: window.innerHeight > window.innerWidth ? 17 : 25
+      <div style={{alignSelf:"center", overflowWrap:"break-word", fontSize: window.innerHeight > window.innerWidth ? 17 : 20
     }}>
         <p>Bienvenue dans mon portfolio!</p>
         <p>Je m’appelle Adèle Fontanaud et je suis titulaire d'un DUT Métiers du Multimédia et de l'Internet (MMI) effectué à Angoulême.</p>
