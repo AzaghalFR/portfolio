@@ -68,7 +68,7 @@ export const Contact = (props: {
         </div>
       </div>
     </div>
-    <div style = {{height:"40vh", display:"flex", justifyContent:"center", alignItems:'center'}}>
+    <div style = {{height:"20vh", display:"flex", justifyContent:"center", alignItems:'center'}}>
 </div>
   </div>
  )
