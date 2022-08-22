@@ -1,15 +1,17 @@
 import { Button, IconButton, Modal, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import './App.css';
-import BackgroundImage from './assets/img/banniere.png';
+import BackgroundImage from './assets/img/baniere.png';
 
 import { AboutMe } from './components/AboutMe/aboutme';
 import { Contact } from './components/Contact/contact';
 import { Header } from './components/Header/header';
 import { Portfolio } from './components/Portfolio/portfolio';
 import { Skills } from './components/Skills/skills';
-import portfolioTitle from './assets/img/portfolio_title.png'
+import portfolioTitle from './assets/img/portfolio.png'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+
 interface IImage {img: string, title: string};
 
 function App() {
@@ -33,7 +35,7 @@ useEffect(() => {
   return (
     <div id="app">
        <Header/>
-      <div style={{display:"flex", flexDirection:"column", position:"relative",backgroundImage:`url(${BackgroundImage})`, justifyContent:"center", alignItems:'center', height: "100vh", backgroundAttachment:"fixed", backgroundPositionX:"center", backgroundPositionY:"bottom", backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
+      <div style={{display:"flex", flexDirection:"column", position:"relative",backgroundImage:`url(${BackgroundImage})`, justifyContent:"center", alignItems:'center', height: "100vh", backgroundPositionX:"center", backgroundPositionY:"bottom", backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
         <img src={portfolioTitle} width={window.innerHeight < window.innerWidth ? window.innerWidth * 0.4 : window.innerWidth * 0.8}/>
         {/* <div className='shadow-portfolio' style={{backgroundColor:"#B0CFDD", padding:20, width:"50%", borderRadius:20, display:'flex', justifyContent:"center", maxWidth: 350}}>
           <Typography
@@ -51,19 +53,12 @@ useEffect(() => {
             MON PORTFOLIO
           </Typography>
         </div> */}
-        {window.innerHeight < window.innerWidth && <div style={{display:'flex', flexDirection:'row', position: 'absolute', bottom: '10%', flexWrap:"wrap"}}>
 
-        {/* <img src={Button1} onClick={()=> console.log("button1")} height={30} style={{margin: 20}}/>
-        <img src={Button2} onClick={()=> console.log("button1")} height={30} style={{margin: 20}}/>
-        <img src={Button3} onClick={()=> console.log("button1")} height={30} style={{margin: 20}}/> */}
-
-        {/* <div  style={{margin: 20, width:150, borderRadius:20, display:'flex', justifyContent:"center", maxWidth: 350, fontWeight: "bold", fontSize: 25}}>
-            Oui
-        </div> */}
-        {/* <div className='shadow-portfolio' style={{margin: 20, backgroundColor:"#B0CFDD", padding:20,  width:150,  borderRadius:20, display:'flex', justifyContent:"center", maxWidth: 350}}>
-            Oui
-        </div>  */}
-        </div>}
+        {scrollPosition === 0 && 
+          <div style={{position: "absolute", bottom: 20, left: window.innerWidth/2 -20, backgroundColor:"pink", borderRadius:20, display: "flex", justifyContent:"center", alignItems:"center"}}>
+            <KeyboardDoubleArrowDownIcon style={{ fontSize: 40, color:"white"}}/>
+          </div>
+        }
       </div>
       <AboutMe />
       <Skills/>

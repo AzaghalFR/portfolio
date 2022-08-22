@@ -43,49 +43,47 @@ export const AboutMe = (
       width={window.innerHeight < window.innerWidth ? window.innerWidth * 0.6 : window.innerWidth *0.8} 
       />
       
-      {displayMore &&<div style={{position:"relative", marginBlock:30, width:"100%", display:"flex", justifyContent: "space-evenly", flexDirection:"row", flexWrap:"wrap"}}>
-        <div className='shadow-portfolio' style={{  border : "2px solid #8C685E" , width: window.innerHeight > window.innerWidth ? "90%" :"20%", alignSelf:"center", overflowWrap:"break-word", margin: 20}}>
+      {displayMore &&<div style={{position:"relative", marginBlock:30, width:"100%", display:"flex", justifyContent: "space-evenly", alignItems:"flex-start", flexDirection:"row", flexWrap:"wrap"}}>
+        <div className='shadow-portfolio' style={{  border : "2px solid #8C685E" , width: window.innerHeight > window.innerWidth ? "90%" :"20%", overflowWrap:"break-word", margin: 20}}>
           <p style={{borderBottom:"3px solid white", paddingBlock: 15, fontSize: 20,  fontWeight: "bold" , top:0, width: '100%', textAlign:"center", margin:0}}>DUT MMI</p>
-          <div style= {{padding:20}}>
-          <p>Option Communication et presse et numérique</p>
-          <p>Chargée de communication digitale stagiaire pour Le Potager D'à Cotè</p>
-          <p>Graphiste stagiaire pour Atelier Graphic (2019)</p>
+          <div style= {{padding:20}}> 
+          <p>Pour ma derrniére année a l'IUT je me suis spécialissé dans l'option Communication et presse et numérique que propose ma formation.</p>
+          <p>Dans le cadre de celle-ci j'ai eu l'opportunitée être chargée de communication digitale stagiaire pour Le Potager D'à Cotè pour une durée de deux mois.</p>
+          <p>J'ai aussi effectué des missons en tant que graphiste stagiaire chez Atelier Graphic en 2019 pendant une durée de trois semaines.</p>
           
           
           </div>
         </div>
        
-        <div className='shadow-portfolio' style={{ border : "2px solid #8C685E", width: window.innerHeight > window.innerWidth ? "90%" :"20%", alignSelf:"center", overflowWrap:"break-word", margin: 20}}>
-          <p style={{borderBottom:"3px solid white", fontSize: 20, fontWeight: "bold", paddingBlock: 15,  top:0, width: '100%', textAlign:"center", margin:0}}>Savoir-êtres</p>
+        <div className='shadow-portfolio' style={{ border : "2px solid #8C685E", width: window.innerHeight > window.innerWidth ? "90%" :"20%", overflowWrap:"break-word", margin: 20}}>
+          <p style={{borderBottom:"3px solid white", fontSize: 20, fontWeight: "bold", paddingBlock: 15,  top:0, width: '100%', textAlign:"center", margin:0}}>Service Civique</p>
           <div style= {{padding:20}}>
-          <p> Organisation </p>
-          <p> Patience </p>
-          <p> Polyvalence </p>
-          <p> Travail d'équipe </p>
-          <p> Créativité </p>
-          <p> Etre a l'écoute </p>
+          <p> J'ai éfféctué un service civique Dans un EHPAD pour une durée de 8 mois</p>
+          <p> En charge de personnes agées et/ou en situation de handicap, afin de m'assurer de leur bien être et de les aider dans leurs quotidiens. </p>
+          <p> J'ai aussi pu etre en charge de differentes annimations, et de l'accueil des familles. </p>
+          <p> Cela m'a permis d'améliorer mon travaille d'équipe et mon aisance auprés de nombreux publics. </p>
 
           </div>
         </div>
 
-        <div className='shadow-portfolio' style={{  border : "2px solid #8C685E", width: window.innerHeight > window.innerWidth ? "90%" :"20%", alignSelf:"center", overflowWrap:"break-word", margin: 20}}>
-          <p style={{borderBottom:"3px solid white", paddingBlock: 15, fontSize: 20, fontWeight: "bold" , top:0, width: '100%', textAlign:"center", margin:0}}> Savoir-faire </p>
+        <div className='shadow-portfolio' style={{  border : "2px solid #8C685E", width: window.innerHeight > window.innerWidth ? "90%" :"20%", overflowWrap:"break-word", margin: 20}}>
+          <p style={{borderBottom:"3px solid white", paddingBlock: 15, fontSize: 20, fontWeight: "bold" , top:0, width: '100%', textAlign:"center", margin:0}}> Garde d'enfants </p>
           <div style= {{padding:20}}>
-          <p></p>
-          <p>Gestions de conflits</p>
-          <p>Gestion des reasaux sociaux</p>
-          <p>Illustrer des projets</p>
+          <p>Aprés mon service civique j'ai encore découvert un autre domaine d'activité. </p>
+          <p>J'ai acquis de nombreuses competences en m'occupant de differents enfants pendant maintenant bientot une année.</p>
+          <p>Aux cotés des enfants, il faut savoir gérer les situations de stress, les situations conflictuelles et les imprévues.</p>
+          <p>J'ai beaucoups aimé les voirs s'épanouir a mes cotés et créer du liens  avec eux, cela m'a entres autres permis de gagner confiance en moi.</p>
         
           </div>
         </div>
-        <div className='shadow-portfolio' style={{ border : "2px solid #8C685E", width: window.innerHeight > window.innerWidth ? "90%" :"20%", alignSelf:"center", overflowWrap:"break-word", margin: 20}}>
+        <div className='shadow-portfolio' style={{ border : "2px solid #8C685E", width: window.innerHeight > window.innerWidth ? "90%" :"20%", overflowWrap:"break-word", margin: 20}}>
           
-          <p style={{borderBottom:"3px solid white", paddingBlock: 15, fontSize: 20, fontWeight: "bold" , top:0, width: '100%', textAlign:"center", margin:0}}> Service Civique</p>
+          <p style={{borderBottom:"3px solid white", paddingBlock: 15, fontSize: 20, fontWeight: "bold" , top:0, width: '100%', textAlign:"center", margin:0}}> Et maintenant ? </p>
           <div style= {{padding:20}}>
-          <p></p>
-          <p>Gestions de conflits</p>
-          <p>Gestion des reasaux sociaux</p>
-          <p>Illustrer des projets</p>
+          <p>A l'heure actuelle, malgrés les bons moments que je passe aux cotés des enfants, j'aimerai trouver un travail qui met en actions toutes mes competences et mes centres d'intêret.</p>
+          <p>Un travail dans lequel je pourrais m'épanouir et découvrir de nouvelles perspéctives d'avenir. </p>
+          <p>C'est pour cela que je postule aujourd'hui a des offfres d'emploies, qui peuvent me correspondre.</p>
+
         
           </div>
         </div>
