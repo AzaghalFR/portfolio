@@ -55,9 +55,9 @@ useEffect(() => {
         </div> */}
 
         {scrollPosition === 0 && 
-          <div style={{position: "absolute", bottom: 20, left: window.innerWidth/2 -20, backgroundColor:"pink", borderRadius:20, display: "flex", justifyContent:"center", alignItems:"center"}}>
-            <KeyboardDoubleArrowDownIcon style={{ fontSize: 40, color:"white"}}/>
-          </div>
+          <IconButton onClick={() => window.scrollTo({top : window.innerHeight, behavior: "smooth"})} size="medium" style={{position: "absolute", bottom: 20, left: window.innerWidth/2 -20, backgroundColor:"pink"}}>
+            <KeyboardDoubleArrowDownIcon style={{ color:"white"}}/>
+          </IconButton>
         }
       </div>
       <AboutMe />
@@ -95,7 +95,7 @@ useEffect(() => {
         </div>
       </Modal>
       {window.scrollY >= window.innerHeight && 
-        <IconButton style={{position:"fixed", bottom:30, right:30, backgroundColor:"lightseagreen", color:"white"}} onClick={() => window.scrollTo({top:0, behavior:"smooth"})}>
+        <IconButton size="medium" style={{position:"fixed", bottom:30, right:30, backgroundColor:"#6ac0d1AA", color:"white"}} onClick={() => window.scrollTo({top:0, behavior:"smooth"})}>
           <KeyboardArrowUpIcon />
         </IconButton>
          } 

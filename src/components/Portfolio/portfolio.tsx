@@ -1,14 +1,22 @@
 import { Button, ImageList, ImageListItem, Typography } from "@mui/material";
 import { Dispatch, useEffect, useRef, useState } from "react";
 import "./style.css";
-import  Totoro from '../../assets/img/Totoro.jpg'
-import  ThreshImage from '../../assets/img/Thresh.png'
+import  Totoro from '../../assets/img/Tototo.jpg'
+import  ThreshImage from '../../assets/img/Thresh.jpg'
 import  DIYSImage from '../../assets/img/DIYS.jpg'
 import  Hwasa from '../../assets/img/hwasa.jpg'
 import  Fille from '../../assets/img/fille.jpg'
 import  Jenie from '../../assets/img/jenie.jpg'
 import  Rousse from '../../assets/img/Rousse.jpg'
-import  Vegie from '../../assets/img/vegie.jpg'
+import  Banniere from '../../assets/img/banniere.jpg'
+
+import  Fille2 from '../../assets/img/fille2.jpg'
+import  Nayeon from '../../assets/img/Nayeon.jpg'
+
+import  Luca from '../../assets/img/luca.jpg'
+
+import  Bibliotheque from '../../assets/img/bibliotheque.jpg'
+
 import  TheOffice from '../../assets/img/theOffice.jpg'
 import  Moi from '../../assets/img/Moi.jpg'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -38,20 +46,30 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
   const [displayMore, setDisplayMore] = useState<boolean>(false);
  return (
     <div id="portfolio" style={{backgroundImage:`url(${BackgroundImage})`, backgroundAttachment:"fixed", backgroundPositionX:"center", backgroundPositionY:"20%", backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
-      <div style = {{height:"40vh", display:"flex", justifyContent:"center", alignItems:'center'}}>
-      <p style={{fontWeight: "bold", fontSize: 40, color:"white"}}>
-            MES CREATIONS
-          </p>
+     
+     <div style = {{height:"40vh", display:"flex", justifyContent:"center", alignItems:'center'}}>
+     
     </div>
     
+
       <div className="portfolio-main-container">
+      <div style = {{height:"30vh", display:"flex", justifyContent:"center", alignItems:'center'}}>       
+  
+  <p style={{fontWeight: "bold", fontSize: 30, color:"#8C685E"}}>
+  ♡ Quelques-unes de mes créations ♡ </p>
+          
+          </div>
       <ImageList
       sx={{  width: "70%" }}
       variant={window.innerHeight > window.innerWidth ? "masonry" : "quilted"}
       cols={window.innerHeight > window.innerWidth ? 1 : 3}
       gap={20}
       rowHeight= {window.innerHeight < window.innerWidth ? window.innerWidth * 0.2  : undefined }
+      
     >
+
+
+
       {itemData.map((item, idx) => ( 
         
           (idx < 7 || displayMore) &&  
@@ -80,6 +98,8 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
               &fit=crop&auto=format`);
               }}
             />
+
+            
           </ImageListItem>
         
       
@@ -152,14 +172,16 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
 
 
 const itemData : IImage[] = [
+  
   {
-    img: ThreshImage,
+    img: Nayeon,
     title: 'Totoro',
     cols: 2,
     rows:2
   },
+  
   {
-    img: Hwasa,
+    img: Moi,
     title: 'Totoro',
     cols: 1,
     rows:2
@@ -168,28 +190,16 @@ const itemData : IImage[] = [
     img: Fille,
     title: 'Totoro',
     cols: 1,
-    rows:1
-  },
-  {
-    img: Moi,
-    title: 'Totoro',
-    cols: 2,
-    rows:1
-  },
-  {
-    img: TheOffice,
-    title: 'Totoro',
-    cols: 2,
-    rows:1
-  },
-  {
-    img: DIYSImage,
-    title: 'Totoro',
-    cols: 1,
     rows:2
   },
   {
-    img: Totoro,
+    img: Bibliotheque,
+    title: 'Totoro',
+    cols: 2,
+    rows:1
+  },
+  {
+    img: Banniere,
     title: 'Totoro',
     cols: 2,
     rows:1
@@ -204,24 +214,36 @@ const itemData : IImage[] = [
     img: Rousse,
     title: 'Totoro',
     cols: 1,
-    rows:1
+    rows:2
   },
   {
-    img: Totoro,
+    img: Luca,
     title: 'Totoro',
     cols: 1,
-    rows:1
+    rows:2
   },
   {
-    img: Totoro,
-    title: 'Totoro',
-    cols: 1,
-    rows:1
-  },
-  {
-    img: Vegie,
+    img: TheOffice,
     title: 'Totoro',
     cols: 2,
+    rows:2
+  },
+  {
+    img: DIYSImage,
+    title: 'Totoro',
+    cols: 1,
+    rows:1
+  },
+  {
+    img: Totoro,
+    title: 'Totoro',
+    cols: 2,
+    rows:2
+  },
+  {
+    img: ThreshImage,
+    title: 'Totoro',
+    cols: 1,
     rows:1
   },
 ];
