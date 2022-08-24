@@ -1,16 +1,16 @@
-import { Button, IconButton, Modal, Typography } from '@mui/material';
+import { IconButton, Modal } from '@mui/material';
 import { useEffect, useState } from 'react';
 import './App.css';
 import BackgroundImage from './assets/img/baniere.png';
 
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import portfolioTitle from './assets/img/portfolio.png';
 import { AboutMe } from './components/AboutMe/aboutme';
 import { Contact } from './components/Contact/contact';
 import { Header } from './components/Header/header';
 import { Portfolio } from './components/Portfolio/portfolio';
 import { Skills } from './components/Skills/skills';
-import portfolioTitle from './assets/img/portfolio.png'
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 
 interface IImage {img: string, title: string};
 

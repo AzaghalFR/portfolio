@@ -1,10 +1,10 @@
-import { Dispatch, LegacyRef, useEffect, useRef, useState } from 'react'
-import  AboutMePhoto from '../../assets/img/aboutmephoto.png'
-import AboutMeTitle from '../../assets/img/aboutme.png'
-import frise from '../../assets/img/frise.png'
+import ExpandLessIcon from '@mui/icons-material/ExpandLess'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { Button } from '@mui/material'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import { useState } from 'react'
+import AboutMeTitle from '../../assets/img/aboutmeTitle.png'
+import AboutMePhoto from '../../assets/img/aboutmephoto.png'
+import frise from '../../assets/img/frise.png'
 export const AboutMe = (
 
   ) =>
@@ -25,10 +25,11 @@ export const AboutMe = (
       <div style={{alignSelf:"center", overflowWrap:"break-word", fontSize: window.innerHeight > window.innerWidth ? 17 : 20
     }}>
         <p>Bienvenue dans mon portfolio!</p>
-        <p>Je m’appelle Adèle Fontanaud et je suis titulaire d'un DUT Métiers du Multimédia et de l'Internet (MMI) effectué à Angoulême.</p>
-        <p>Pendant ma formation je me suis spécialisée dans le parcours de la communication. Cela m’a permis d'enrichir mes compétences et mes connaissance dans de nombreux domaines. Pendans cette formation et grâce à sa pluridisciplinarité j’ai aussi utilisé differents logiciels tel que Photoshop et Illustrator ou encore des logiciels d’animation et de montage.</p>
-        <p>Après avoir passé une année en tant qu’animatrice en service civique au sein d’un EHPAD, je souhaite dorénavant trouver un travail dans lequel je pourrais m'épanouir.</p>
-        <p>Ce que j’aime le plus c’est pouvoir exprimer ma créativité à travers différents projets, autant professionnel que personnel.</p>
+        <p>Je m’appelle Adèle Fontanaud et je suis titulaire d'un DUT Métiers du Multimédia et de l'Internet (MMI) effectué à Angoulême. </p>
+        <p>Au milieu de ma formation je me suis spécialisée dans le domaine de la communication visuelle. Cela m’a permis d'enrichir mes compétences et mes connaissances dans de nombreux domaines. Pendant cette formation et grâce à sa pluridisciplinarité j’ai aussi utilisé différents logiciels tels que Photoshop et Illustrator ou encore des logiciels d’animation et de montage.
+</p>
+        <p>Après avoir passé une année en tant qu’animatrice en service civique au sein d’un EHPAD, je souhaite dorénavant trouver un travail dans lequel je pourrai m'épanouir.</p>
+        <p>Ce que j’aime le plus c’est pouvoir exprimer ma créativité à travers différents projets, autant professionnels que personnels. </p>
 
       </div>
     </div>
@@ -47,9 +48,10 @@ export const AboutMe = (
         <div className='shadow-portfolio' style={{  border : "2px solid #8C685E" , width: window.innerHeight > window.innerWidth ? "90%" :"20%", overflowWrap:"break-word", margin: 20}}>
           <p style={{borderBottom:"3px solid white", paddingBlock: 15, fontSize: 20,  fontWeight: "bold" , top:0, width: '100%', textAlign:"center", margin:0}}>DUT MMI</p>
           <div style= {{padding:20}}> 
-          <p>Pour ma derrniére année a l'IUT je me suis spécialissé dans l'option Communication et presse et numérique que propose ma formation.</p>
-          <p>Dans le cadre de celle-ci j'ai eu l'opportunitée être chargée de communication digitale stagiaire pour Le Potager D'à Cotè pour une durée de deux mois.</p>
-          <p>J'ai aussi effectué des missons en tant que graphiste stagiaire chez Atelier Graphic en 2019 pendant une durée de trois semaines.</p>
+          <p>Pour ma dernière année à l'IUT je me suis spécialisée dans l'option Communication et Presse Numérique que propose ma formation.</p>
+          <p>Dans le cadre de celle-ci j'ai eu l'opportunité être chargée de communication digitale stagiaire pour Le Potager D'à Côté pour une durée de deux mois.
+</p>
+          <p>J'ai aussi effectué des missions en tant que graphiste stagiaire chez Atelier Graphic en 2019 pendant une durée de trois semaines.</p>
           
           
           </div>
@@ -59,9 +61,9 @@ export const AboutMe = (
           <p style={{borderBottom:"3px solid white", fontSize: 20, fontWeight: "bold", paddingBlock: 15,  top:0, width: '100%', textAlign:"center", margin:0}}>Service Civique</p>
           <div style= {{padding:20}}>
           <p> J'ai éfféctué un service civique Dans un EHPAD pour une durée de 8 mois</p>
-          <p> En charge de personnes agées et/ou en situation de handicap, afin de m'assurer de leur bien être et de les aider dans leurs quotidiens. </p>
-          <p> J'ai aussi pu etre en charge de differentes annimations, et de l'accueil des familles. </p>
-          <p> Cela m'a permis d'améliorer mon travaille d'équipe et mon aisance auprés de nombreux publics. </p>
+          <p> En charge de personnes âgées et/ou en situation de handicap, afin de m'assurer de leur bien-être et de les aider dans leurs quotidiens.</p>
+          <p> J'ai aussi pu être en charge de différentes animations, et de l'accueil des familles. </p>
+          <p> Cela m'a permis d'améliorer mon travail d'équipe et mon aisance auprès de nombreux publics. </p>
 
           </div>
         </div>
@@ -69,10 +71,10 @@ export const AboutMe = (
         <div className='shadow-portfolio' style={{  border : "2px solid #8C685E", width: window.innerHeight > window.innerWidth ? "90%" :"20%", overflowWrap:"break-word", margin: 20}}>
           <p style={{borderBottom:"3px solid white", paddingBlock: 15, fontSize: 20, fontWeight: "bold" , top:0, width: '100%', textAlign:"center", margin:0}}> Garde d'enfants </p>
           <div style= {{padding:20}}>
-          <p>Aprés mon service civique j'ai encore découvert un autre domaine d'activité. </p>
-          <p>J'ai acquis de nombreuses competences en m'occupant de differents enfants pendant maintenant bientot une année.</p>
-          <p>Aux cotés des enfants, il faut savoir gérer les situations de stress, les situations conflictuelles et les imprévues.</p>
-          <p>J'ai beaucoups aimé les voirs s'épanouir a mes cotés et créer du liens  avec eux, cela m'a entres autres permis de gagner confiance en moi.</p>
+          <p>Après mon service civique j'ai encore découvert un autre domaine d'activité.</p>
+          <p>J'ai acquis de nombreuses compétences en m'occupant de différents enfants pendant maintenant bientôt une année.</p>
+          <p>Aux côtés des enfants, il faut savoir gérer les situations de stress, les situations conflictuelles et les imprévues.</p>
+          <p>J'ai beaucoup aimé les voir s'épanouir à mes côtés et créer du lien avec eux, cela m'a entre autres permis de gagner confiance en moi.</p>
         
           </div>
         </div>
@@ -80,9 +82,9 @@ export const AboutMe = (
           
           <p style={{borderBottom:"3px solid white", paddingBlock: 15, fontSize: 20, fontWeight: "bold" , top:0, width: '100%', textAlign:"center", margin:0}}> Et maintenant ? </p>
           <div style= {{padding:20}}>
-          <p>A l'heure actuelle, malgrés les bons moments que je passe aux cotés des enfants, j'aimerai trouver un travail qui met en actions toutes mes competences et mes centres d'intêret.</p>
-          <p>Un travail dans lequel je pourrais m'épanouir et découvrir de nouvelles perspéctives d'avenir. </p>
-          <p>C'est pour cela que je postule aujourd'hui a des offfres d'emploies, qui peuvent me correspondre.</p>
+          <p>À l'heure actuelle, malgré les bons moments que je passe aux côtés des enfants, j'aimerais trouver un travail qui met en action toutes mes compétences et mes centres d'intérêt.</p>
+          <p>Un travail dans lequel je pourrais m'épanouir et découvrir de nouvelles perspectives d'avenir. </p>
+          <p>C'est pour cela que je postule aujourd'hui à des offres d'emploi, qui peuvent me correspondre.</p>
 
         
           </div>

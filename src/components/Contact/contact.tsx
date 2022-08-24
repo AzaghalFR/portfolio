@@ -1,14 +1,14 @@
-import { Button, TextField, Typography } from '@mui/material';
-import BackgroundImage from '../../assets/img/poisson1.jpg';
+import { Button } from '@mui/material';
 import ContactMeImage from '../../assets/img/contactme.png';
+import BackgroundImage from '../../assets/img/poisson2.jpg';
 
-import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
-import RoomIcon from '@mui/icons-material/Room';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import PhoneIcon from '@mui/icons-material/Phone';
+import RoomIcon from '@mui/icons-material/Room';
+import { Dispatch } from 'react';
 import cvImage from '../../assets/img/CV.png';
-import { Dispatch, useEffect, useRef } from 'react';
 
 
 export const Contact = (props: {

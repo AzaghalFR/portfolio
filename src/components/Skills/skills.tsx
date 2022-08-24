@@ -1,10 +1,7 @@
-import { Typography } from '@mui/material'
-import BackgroundImage from '../../assets/img/poisson1.jpg'
-import InterestTitle from "../../assets/img/centre_interet.png"
-import Interest from "../../assets/img/interets.png"
 import Interest1 from "../../assets/img/Interest1.png"
 import Interest2 from "../../assets/img/Interest2.png"
-import { flexbox } from '@mui/system'
+import InterestTitle from "../../assets/img/interetTitre.png"
+import BackgroundImage from '../../assets/img/poisson2.jpg'
 
 export const Skills = () =>
 {
@@ -17,7 +14,7 @@ export const Skills = () =>
      
     <div style={{backgroundColor: "rgb(245 207 212)", width:"100%", display:"flex", flexDirection:"column", alignItems:"center", minHeight:'100vh', paddingTop: 20}}>
    
-    <p style={{fontWeight: "bold", fontSize: 30, color:"white", height:"30vh", display:"flex", justifyContent:"center", alignItems:'center', margin: 0}}>
+    <p style={{fontWeight: "bold",textAlign:"center", fontSize: 30, color:"white", height:"30vh", display:"flex", justifyContent:"center", alignItems:'center', margin: 0}}>
    Toutes mes aptitudes professionnelles</p>
 
       

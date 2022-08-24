@@ -8,7 +8,7 @@ import  Hwasa from '../../assets/img/hwasa.jpg'
 import  Fille from '../../assets/img/fille.jpg'
 import  Jenie from '../../assets/img/jenie.jpg'
 import  Rousse from '../../assets/img/Rousse.jpg'
-import  Banniere from '../../assets/img/banniere.jpg'
+import  Banniere from '../../assets/img/baniere.png'
 
 import  Fille2 from '../../assets/img/fille2.jpg'
 import  Nayeon from '../../assets/img/Nayeon.jpg'
@@ -24,6 +24,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 
 import BackgroundImage from '../../assets/img/poisson2.jpg'
+import { MicOffRounded } from "@mui/icons-material";
 
 interface IImage {img: string, title: string, cols: number, rows: number};
 
@@ -55,7 +56,7 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
       <div className="portfolio-main-container">
       <div style = {{height:"30vh", display:"flex", justifyContent:"center", alignItems:'center'}}>       
   
-  <p style={{fontWeight: "bold", fontSize: 30, color:"#8C685E"}}>
+  <p style={{fontWeight: "bold", fontSize: 30, color:"#8C685E", textAlign:"center",}}>
   ♡ Quelques-unes de mes créations ♡ </p>
           
           </div>
@@ -72,7 +73,7 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
 
       {itemData.map((item, idx) => ( 
         
-          (idx < 7 || displayMore) &&  
+          (idx < 5 || displayMore) &&  
           <ImageListItem key={idx} cols={item.cols || 1} rows={item.rows || 1}>
             <img
             key={item.title}
@@ -181,17 +182,24 @@ const itemData : IImage[] = [
   },
   
   {
+    img: DIYSImage,
+    title: 'Totoro',
+    cols: 1,
+    rows:1
+  },
+  {
+    img: Banniere,
+    title: 'Totoro',
+    cols: 1,
+    rows:1
+  },
+  {
     img: Moi,
     title: 'Totoro',
     cols: 1,
-    rows:2
+    rows:1
   },
-  {
-    img: Fille,
-    title: 'Totoro',
-    cols: 1,
-    rows:2
-  },
+  
   {
     img: Bibliotheque,
     title: 'Totoro',
@@ -199,18 +207,30 @@ const itemData : IImage[] = [
     rows:1
   },
   {
-    img: Banniere,
-    title: 'Totoro',
-    cols: 2,
-    rows:1
-  },
-  {
     img: Jenie,
     title: 'Totoro',
-    cols: 2,
+    cols: 1,
     rows:2
   },
   {
+    img: Fille2,
+    title: 'Totoro',
+    cols: 1,
+    rows:1
+  },
+  {  
+    img: Fille,
+    title: 'Totoro',
+    cols: 1,
+    rows:1
+  },
+  {
+    img: TheOffice,
+    title: 'Totoro',
+    cols: 1,
+    rows:1
+  },
+{  
     img: Rousse,
     title: 'Totoro',
     cols: 1,
@@ -222,14 +242,9 @@ const itemData : IImage[] = [
     cols: 1,
     rows:2
   },
+
   {
-    img: TheOffice,
-    title: 'Totoro',
-    cols: 2,
-    rows:2
-  },
-  {
-    img: DIYSImage,
+    img: Hwasa,
     title: 'Totoro',
     cols: 1,
     rows:1
@@ -245,5 +260,5 @@ const itemData : IImage[] = [
     title: 'Totoro',
     cols: 1,
     rows:1
-  },
+  }
 ];
