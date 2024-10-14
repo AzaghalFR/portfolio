@@ -22,7 +22,7 @@ export const Contact = (props: {
   <div id='contact' style={{backgroundImage:`url(${BackgroundImage})`, backgroundAttachment:"fixed", backgroundPositionX:"center", backgroundPositionY:"20%", backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
     <div style={{ width:"100%", display:"flex", flexDirection:"row", alignItems:"center",justifyContent:"space-evenly", backgroundColor:'white', flexWrap:"wrap"}}>
       <div style={{height: "50vh", width: "40vh", margin: 50}}>
-        <img alt="CV" src={cvImage} height={window.innerHeight*0.5} onClick={() => setDisplayImage({img: cvImage, title:"CV"})}/>
+        <img alt="CV" src={cvImage} style={{cursor: "pointer"}} height={window.innerHeight*0.5} onClick={() => setDisplayImage({img: cvImage, title:"CV"})}/>
 
       </div>
       <div style={{marginBottom:50, display:"flex", flexDirection:"column", alignItems:"center", maxWidth: "90%"}}>

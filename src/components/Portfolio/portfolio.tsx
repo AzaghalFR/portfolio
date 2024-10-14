@@ -87,6 +87,7 @@ export const Portfolio = (props: {
                         ? undefined
                         : window.innerWidth * 0.8
                     }
+                    style={{cursor:"pointer"}}
                     alt={item.title}
                     loading="lazy"
                     onClick={() => {
