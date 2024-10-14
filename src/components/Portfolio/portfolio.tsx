@@ -2,7 +2,7 @@ import { Button, ImageList, ImageListItem, Typography } from "@mui/material";
 import { Dispatch, useEffect, useRef, useState } from "react";
 import "./style.css";
 import  Totoro from '../../assets/img/Tototo.jpg'
-import  ThreshImage from '../../assets/img/Thresh.jpg'
+import  ThreshImage from '../../assets/img/thresh.jpg'
 import  DIYSImage from '../../assets/img/DIYS.jpg'
 import  Hwasa from '../../assets/img/hwasa.jpg'
 import  Fille from '../../assets/img/fille.jpg'
