@@ -18,7 +18,7 @@ export const AboutMe = () => {
         backgroundImage: `url(${BackgroundImage})`,
         backgroundAttachment: "fixed",
         backgroundPositionX: "center",
-        backgroundPositionY: "20%",
+        backgroundPositionY: "0%",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         paddingBottom: "40vh",

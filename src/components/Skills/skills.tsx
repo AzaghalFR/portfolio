@@ -6,7 +6,7 @@ import BackgroundImage from '../../assets/img/poisson.webp'
 export const Skills = () =>
 {
  return (
-  <div style={{backgroundImage:`url(${BackgroundImage})`, backgroundAttachment:"fixed", backgroundPositionX:"center", backgroundPositionY:"20%", backgroundRepeat:"no-repeat", backgroundSize:"cover", minHeight:"100vh", paddingBottom: "40vh"}}>
+  <div style={{backgroundImage:`url(${BackgroundImage})`, backgroundAttachment:"fixed", backgroundPositionX:"center", backgroundPositionY:"0%", backgroundRepeat:"no-repeat", backgroundSize:"cover", minHeight:"100vh", paddingBottom: "40vh"}}>
      
     <div style={{backgroundColor: "rgb(245 207 212)", width:"100%", display:"flex", flexDirection:"column", alignItems:"center", minHeight:'100vh', paddingTop: 20}}>
    

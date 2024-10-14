@@ -1,7 +1,6 @@
 import { Button, IconButton, Modal, Slide, Slider } from "@mui/material";
 import { useEffect, useState } from "react";
 import "./App.css";
-import BackgroundImage from "./assets/img/banniere.webp";
 
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
@@ -21,20 +20,20 @@ import { Pagination } from "swiper/modules";
 import "swiper/css/pagination";
 
 // portfolio1
-import Totoro from "./assets/img/perso/Tototo.jpg";
-import ThreshImage from "./assets/img/perso/thresh.jpg";
+import Banniere from "./assets/img/banniere.webp";
+import Totoro from "./assets/img/perso/Totoro.webp";
+import ThreshImage from "./assets/img/perso/Thresh.webp";
 import DIYSImage from "./assets/img/perso/DIYS.jpg";
 import Hwasa from "./assets/img/perso/hwasa.jpg";
 import Fille from "./assets/img/perso/fille.jpg";
 import Jenie from "./assets/img/perso/jenie.jpg";
-import Rousse from "./assets/img/perso/Rousse.jpg";
-import Banniere from "./assets/img/banniere.webp";
+import Rousse from "./assets/img/perso/Rousse.webp";
 import Fille2 from "./assets/img/perso/fille2.jpg";
-import Nayeon from "./assets/img/perso/Nayeon.jpg";
-import Luca from "./assets/img/perso/luca.jpg";
+import Nayeon from "./assets/img/perso/Nayeon.webp";
+import Luca from "./assets/img/perso/Luca.webp";
 import Bibliotheque from "./assets/img/perso/bibliotheque.jpg";
-import TheOffice from "./assets/img/perso/theOffice.jpg";
-import Moi from "./assets/img/perso/Moi.jpg";
+import TheOffice from "./assets/img/perso/TheOffice.webp";
+import Moi from "./assets/img/perso/Moi.webp";
 
 // portfolio2
 import CreartistesMarathon from "./assets/img/pro/cre_marathon.png";
@@ -98,7 +97,7 @@ function App() {
           display: "flex",
           flexDirection: "column",
           position: "relative",
-          backgroundImage: `url(${BackgroundImage})`,
+          backgroundImage: `url(${Banniere})`,
           justifyContent: "center",
           alignItems: "center",
           height: "100vh",
@@ -144,7 +143,7 @@ function App() {
           backgroundImage: `url(${BackgroundImage2})`,
           backgroundAttachment: "fixed",
           backgroundPositionX: "center",
-          backgroundPositionY: "20%",
+          backgroundPositionY: "0%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -274,7 +273,7 @@ function App() {
           backgroundImage: `url(${BackgroundImage2})`,
           backgroundAttachment: "fixed",
           backgroundPositionX: "center",
-          backgroundPositionY: "20%",
+          backgroundPositionY: "0%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           paddingBottom: "40vh",
