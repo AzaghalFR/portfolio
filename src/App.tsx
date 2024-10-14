@@ -48,12 +48,21 @@ import StudioCarte2 from "./assets/img/pro/Studio_Carte_visite2.png";
 import StudioSignature from "./assets/img/pro/Studio_Signature.png";
 import StudioHoraires from "./assets/img/pro/Studio_horaire.png";
 import StudioMariage from "./assets/img/pro/Studio_mariage.png";
+import IEP from "./assets/img/pro/plaquette-iep.png"
+import Kakemono from "./assets/img/pro/kakemono.png"
+import Ville from "./assets/img/pro/villeconnectee.png"
+import Carte from "./assets/img/pro/map.png"
 
 export interface IImage {
   img: string;
   title: string;
   cols: number;
   rows: number;
+}
+
+export interface ILinks {
+  title: string;
+  path: string;
 }
 
 function App() {
@@ -184,7 +193,7 @@ function App() {
               }}
               onClick={() => slideTo(0)}
             >
-              <p>Galerie Cré'Artistes</p>
+              <p>VINCI Energies</p>
             </Button>
             <Button
               variant={selectedSwiper == 1 ? "outlined" : "text"}
@@ -197,8 +206,25 @@ function App() {
                 lineHeight: 0,
                 fontSize: selectedSwiper == 1 ? 25 : 15,
                 fontWeight: selectedSwiper == 1 ? "bold" : "normal",
+                flexWrap: "wrap",
               }}
               onClick={() => slideTo(1)}
+            >
+              <p>Galerie Cré'Artistes</p>
+            </Button>
+            <Button
+              variant={selectedSwiper == 2 ? "outlined" : "text"}
+              style={{
+                color: "pink",
+                borderColor: "#8C685E",
+                textTransform: "none",
+                minHeight: 0,
+                marginInline: 5,
+                lineHeight: 0,
+                fontSize: selectedSwiper == 2 ? 25 : 15,
+                fontWeight: selectedSwiper == 2 ? "bold" : "normal",
+              }}
+              onClick={() => slideTo(2)}
             >
               <p>Studio photo Jarnac</p>
             </Button>
@@ -220,12 +246,20 @@ function App() {
         >
           <SwiperSlide virtualIndex={1}>
             <Portfolio
+              itemData={portfolioVinci}
+              setDisplayImage={setDisplayImage}
+              itemLimit={5}
+              linksData={websiteVinci}
+            />
+          </SwiperSlide>
+          <SwiperSlide virtualIndex={2}>
+            <Portfolio
               itemData={portfolioCreartiste}
               setDisplayImage={setDisplayImage}
               itemLimit={5}
             />
           </SwiperSlide>
-          <SwiperSlide virtualIndex={2}>
+          <SwiperSlide virtualIndex={3}>
             <Portfolio
               itemData={portfolioStudio}
               setDisplayImage={setDisplayImage}
@@ -396,6 +430,45 @@ const portfolioPerso: IImage[] = [
     cols: 1,
     rows: 1,
   },
+];
+
+const portfolioVinci: IImage[] = [
+ 
+  {
+    img: IEP,
+    title: "Plaquette IEP",
+    cols: 2,
+    rows: 1,
+  },  
+  {
+    img: Carte,
+    title: "Carte Charent'elec",
+    cols: 1,
+    rows: 1,
+  },
+  {
+    img: Kakemono,
+    title: "Kakemonos",
+    cols: 1,
+    rows: 1,
+  },
+  {
+    img: Ville,
+    title: "Ville connectée",
+    cols: 2,
+    rows: 1,
+  },
+];
+const websiteVinci: ILinks[] = [
+ 
+  {
+    title: "Site web IEP",
+    path: "https://www.i-e-p.fr/"
+  },  
+  {
+    title: "Site web Fradin Bretton",
+    path: "https://www.fradin-bretton.fr/"
+  },  
 ];
 
 const portfolioStudio: IImage[] = [

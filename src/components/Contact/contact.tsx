@@ -54,9 +54,9 @@ export const Contact = (props: {
           <InstagramIcon style={{color: 'rgb(245 207 212)', marginRight: 10}}/>
           <span style={{color:'#8C685E', textTransform: "none"}}>monsteragatari</span>
         </Button>
-        <Button aria-label="Redirection Instagram" style={{display:"flex", flexDirection:"row",alignItems:"center", marginLeft: 20}} onClick={()=> window.open("https://www.instagram.com/fufu_et_momo/?hl=fr")}>
+        <Button aria-label="Redirection Instagram" style={{display:"flex", flexDirection:"row",alignItems:"center", marginLeft: 20}} onClick={()=> window.open("https://www.instagram.com/fufu_kiki_momo/?hl=fr")}>
           <InstagramIcon style={{color: 'rgb(245 207 212)', marginRight: 10}}/>
-          <span style={{color:'#8C685E', textTransform: "none"}}>fufu_et_momo</span>
+          <span style={{color:'#8C685E', textTransform: "none"}}>fufu_kiki_momo</span>
         </Button>
 
         </div>

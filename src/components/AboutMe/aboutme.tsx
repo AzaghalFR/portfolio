@@ -80,26 +80,41 @@ export const AboutMe = () => {
           >
             <p>Bienvenue dans mon portfolio!</p>
             <p>
-              Je m’appelle Adèle Fontanaud et je suis titulaire d'un DUT Métiers
-              du Multimédia et de l'Internet (MMI) effectué à Angoulême.{" "}
+              Je m'appelle Adèle Fontanaud, et je suis diplômée d'un Bachelor en communication, obtenu à Angoulême en septembre 2024.
             </p>
             <p>
-              Au cours de ma formation je me suis spécialisée dans le domaine de
-              la communication visuelle. Cela m’a permis d'enrichir mes
-              compétences et mes connaissances dans de nombreux domaines.
-              Pendant cette formation et grâce à sa pluridisciplinarité j’ai
-              aussi utilisé différents logiciels de création tels que Photoshop
-              et Illustrator ou encore des logiciels d’animation et de montage.
+              Cette formation m’a permis d’acquérir des compétences variées, 
+              telles que la maîtrise des logiciels de la suite Adobe, 
+              ainsi que des connaissances en marketing. J’ai 
+              également eu la chance de mettre en pratique mes 
+              acquis lors de mon alternance, que je poursuis actuellement 
+              en Master au sein du groupe Vinci Énergie. Cette expérience 
+              m’a permis de me former à WordPress et de développer des 
+              compétences dans des domaines tels que l’événementiel, 
+              la création de contenu sur LinkedIn, et la création visuelle.
             </p>
-            <p>
+            {/* <p>
               Après avoir validé ce diplôme, j'ai passé une année en tant
               qu’animatrice en service civique au sein d’un EHPAD. Je souhaite
               dorénavant trouver un travail dans lequel je pourrai m'épanouir.
-            </p>
+            </p> */}
             <p>
-              Ce que j’aime le plus c’est pouvoir exprimer ma créativité à
-              travers différents projets, autant professionnels que personnels.{" "}
+            Ce que j’aime le plus, c’est exprimer ma créativité à travers des projets divers, qu’ils soient professionnels ou personnels.
             </p>
+            <div style={{width: "100%", display:"flex", justifyContent:"center"}}>
+            <Button
+              variant="outlined"
+              aria-label="Me contacter"
+              style={{ color: "pink", borderColor: "#8C685E"}}
+              onClick={() => {
+                const anchor = document.getElementById("contact");
+                if (anchor) {
+                  window.scrollTo({ top: anchor.offsetTop - window.innerHeight/10, behavior: "smooth" });
+                }}}
+            >
+          N'hésitez pas à me contacter
+        </Button>
+        </div>
           </div>
         </div>
 
@@ -142,6 +157,7 @@ export const AboutMe = () => {
                   flexWrap: "wrap",
                 }}
               >
+                {/* DUT MMI */}
                 <div
                   className="shadow-portfolio"
                   style={{
@@ -166,7 +182,7 @@ export const AboutMe = () => {
                   >
                     DUT MMI
                   </p>
-                  <div style={{ padding: 20 }}>
+                  <div style={{ paddingInline: 20, paddingBlock: 10 }}>
                     <p>
                       Pour ma dernière année à l'IUT je me suis spécialisée dans
                       l'option Communication et Presse Numérique.
@@ -184,7 +200,8 @@ export const AboutMe = () => {
                   </div>
                 </div>
 
-                <div
+                {/* Service Civique */}
+                {/* <div
                   className="shadow-portfolio"
                   style={{
                     border: "2px solid #8C685E",
@@ -232,9 +249,10 @@ export const AboutMe = () => {
                       aisance auprès de nombreux publics.{" "}
                     </p>
                   </div>
-                </div>
+                </div> */}
 
-                <div
+                {/* Garde d'enfant */}
+                {/* <div
                   className="shadow-portfolio"
                   style={{
                     border: "2px solid #8C685E",
@@ -278,8 +296,121 @@ export const AboutMe = () => {
                       gagner confiance en moi.
                     </p>
                   </div>
-                </div>
+                </div> */}
+
+                {/* Bachelor 3 communication */}
                 <div
+                  className="shadow-portfolio"
+                  style={{
+                    border: "2px solid #8C685E",
+                    width:
+                      window.innerHeight > window.innerWidth ? "90%" : "20%",
+                    overflowWrap: "break-word",
+                    margin: 20,
+                  }}
+                >
+                  <p
+                    style={{
+                      borderBottom: "3px solid white",
+                      fontSize: 20,
+                      fontWeight: "bold",
+                      paddingBlock: 15,
+                      top: 0,
+                      width: "100%",
+                      textAlign: "center",
+                      margin: 0,
+                    }}
+                  >
+                    Bachelor 3 communication
+                  </p>
+                  <div style={{ paddingInline: 20, paddingBlock: 10 }}>
+                    <p>
+                      {" "}
+                      J'ai eu l'opportunité d'intégrer la MediaSchool d'Angoulême pour y suivre un Bachelor 3 en communication durant l'année 2023-2024.
+                    </p>
+                    <p>
+                      {" "}
+                      Cette expérience m'a permis d'approfondir certaines connaissances et de découvrir de nouvelles techniques.
+                    </p>
+                    <p>
+                      {" "}
+                      J'ai notamment eu l'occasion de travailler sur de nombreux projets de groupe, en réalisant des analyses de marché et en mettant en place des actions de communication concrètes.{" "}
+                    </p>
+                  </div>
+                </div>
+
+                {/* VINCI Energies (alternance) */}
+                <div
+                  className="shadow-portfolio"
+                  style={{
+                    border: "2px solid #8C685E",
+                    width:
+                      window.innerHeight > window.innerWidth ? "90%" : "20%",
+                    overflowWrap: "break-word",
+                    margin: 20,
+                  }}
+                >
+                  <p
+                    style={{
+                      borderBottom: "3px solid white",
+                      fontSize: 20,
+                      fontWeight: "bold",
+                      paddingTop: 15,
+                      top: 0,
+                      width: "100%",
+                      textAlign: "center",
+                      margin: 0,
+                    }}
+                  >
+                    VINCI Energies<br/>(alternance)
+                  </p>
+                  <div style={{ paddingInline: 20, paddingBottom: 10 }}>
+                    <p>
+                      J'ai eu l'opportunité de réaliser mon alternance au sein du groupe Vinci Énergie, où j'étais en charge de la communication de 9 entreprises au sein de la direction régionale.
+                    </p>
+                    <p>
+                      Mon rôle était d'analyser les besoins spécifiques de chaque entité afin de définir les actions à mener pour améliorer leur visibilité.
+                    </p>
+                    <p>
+                      J'ai notamment créé des plaquettes commerciales, refait plusieurs sites internet, et pris en charge l'organisation d'événements tels que des inaugurations et des fêtes.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Master 2 communication */}
+                <div
+                  className="shadow-portfolio"
+                  style={{
+                    border: "2px solid #8C685E",
+                    width:
+                      window.innerHeight > window.innerWidth ? "90%" : "20%",
+                    overflowWrap: "break-word",
+                    margin: 20,
+                  }}
+                >
+                  <p
+                    style={{
+                      borderBottom: "3px solid white",
+                      fontSize: 20,
+                      fontWeight: "bold",
+                      paddingBlock: 15,
+                      top: 0,
+                      width: "100%",
+                      textAlign: "center",
+                      margin: 0,
+                    }}
+                  >
+                    Master 2 communication
+                  </p>
+                  <div style={{ paddingInline: 20, paddingBlock: 10 }}>
+                    <p>
+                      J'ai l'opportunité de poursuivre en Master avec la même alternance, afin d'approfondir toutes mes connaissances et de continuer à apporter mon aide aux entreprises du groupe Vinci Énergie
+                    </p>
+                  </div>
+                </div>
+
+                {/* Et maintenant ? */}
+                {/* <div
                   className="shadow-portfolio"
                   style={{
                     border: "2px solid #8C685E",
@@ -320,7 +451,7 @@ export const AboutMe = () => {
                       d'emploi, qui peuvent me correspondre.
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             )}
             <Button

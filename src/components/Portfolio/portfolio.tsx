@@ -4,7 +4,7 @@ import "./style.css";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import { IImage } from "../../App";
+import { IImage, ILinks } from "../../App";
 
 
 export const Portfolio = (props: {
@@ -12,8 +12,9 @@ export const Portfolio = (props: {
   itemData: IImage[];
   title?: string;
   itemLimit: number;
+  linksData?: ILinks[];
 }) => {
-  const { setDisplayImage, itemData, title, itemLimit } = props;
+  const { setDisplayImage, itemData, title, itemLimit, linksData } = props;
   function srcset(image: string, size: number, rows = 1, cols = 1) {
     return {
       src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -96,7 +97,22 @@ export const Portfolio = (props: {
               )
           )}
         </ImageList>
-
+{!!linksData && 
+  <div style={{width: "100%", display:"flex", justifyContent:"center"}}>
+  {linksData.map((link : ILinks) => 
+    <Button
+      variant="outlined"
+      aria-label={link.title}
+      style={{ color: "pink", borderColor: "#8C685E", marginInline: 5}}
+      onClick={() => {
+        window.open(link.path);
+      }}
+    >
+    {link.title}
+    </Button>
+  )}
+  </div>
+}
 {itemData.length > itemLimit &&
         <Button
         variant="outlined"

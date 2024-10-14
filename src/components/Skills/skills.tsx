@@ -23,8 +23,7 @@ export const Skills = () =>
           <p>InDesign</p>
           <p>AdobeXD</p>
           <p>Microsoft Office</p>
-          
-          
+          <p>WordPress</p>
           </div>
         </div>
        
