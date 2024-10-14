@@ -1,7 +1,7 @@
 import { Button, IconButton, Modal, Slide, Slider } from "@mui/material";
 import { useEffect, useState } from "react";
 import "./App.css";
-import BackgroundImage from "./assets/img/baniere.webp";
+import BackgroundImage from "./assets/img/banniere.webp";
 
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
@@ -22,13 +22,13 @@ import "swiper/css/pagination";
 
 // portfolio1
 import Totoro from "./assets/img/perso/Tototo.jpg";
-import ThreshImage from "./assets/img/perso/Thresh.jpg";
+import ThreshImage from "./assets/img/perso/thresh.jpg";
 import DIYSImage from "./assets/img/perso/DIYS.jpg";
 import Hwasa from "./assets/img/perso/hwasa.jpg";
 import Fille from "./assets/img/perso/fille.jpg";
-import Jenie from "./assets/img/perso/jenie.webp";
+import Jenie from "./assets/img/perso/jenie.jpg";
 import Rousse from "./assets/img/perso/Rousse.jpg";
-import Banniere from "./assets/img/baniere.webp";
+import Banniere from "./assets/img/banniere.webp";
 import Fille2 from "./assets/img/perso/fille2.jpg";
 import Nayeon from "./assets/img/perso/Nayeon.jpg";
 import Luca from "./assets/img/perso/luca.jpg";

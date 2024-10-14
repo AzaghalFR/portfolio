@@ -5,7 +5,7 @@
   padding-top: 20px;
   position: relative;
   background-color: white;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .portfolio-image-gallery {
@@ -28,4 +28,11 @@
   background-color: pink;
   border-radius: 10px;
   margin: 10px;
+}
+
+.swiper-pagination-bullet-active {
+background-color: pink !important;
+} 
+.swiper-button-next, .swiper-button-prev {
+  color: pink !important;
 }

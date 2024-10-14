@@ -3,7 +3,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Button } from "@mui/material";
 import { useState } from "react";
 import AboutMeTitle from "../../assets/img/aboutmeTitle.webp";
-import AboutMePhoto from "../../assets/img/aboutme.png";
+import AboutMePhoto from "../../assets/img/aboutme.webp";
 import frise from "../../assets/img/frise.webp";
 import BackgroundImage from "../../assets/img/poisson.webp";
 
