@@ -58,10 +58,13 @@ export const Skills = () =>
         style={{backgroundColor: "rgb(245 207 212)", position: 'absolute', top: window.innerHeight < window.innerWidth ? (-(window.innerWidth * 265 / 1423) /4) : (-(window.innerWidth * 265 / 1423) /3)}}/>
           <div style={{display:'flex', flexWrap:"wrap",  justifyContent:'center', flexDirection:'row', width:"100%"}}>
           <img src={Interest1} alt="interet"
-         width={ window.innerHeight < window.innerWidth ? window.innerWidth * 0.3 : window.innerWidth *0.8} 
+            width={ window.innerHeight < window.innerWidth ? window.innerWidth * 0.3 : window.innerWidth *0.8} 
+            height="auto"
           /> 
           <img src={Interest2} alt="interet 2"
            width={ window.innerHeight < window.innerWidth ? window.innerWidth * 0.3 : window.innerWidth *0.8} 
+           height="auto"
+
           /> 
       </div>
       </div>

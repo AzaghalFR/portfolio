@@ -2,8 +2,8 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Button } from "@mui/material";
 import { useState } from "react";
-import AboutMeTitle from "../../assets/img/aboutmeTitle.webp";
 import AboutMePhoto from "../../assets/img/aboutme.webp";
+import AboutMeTitle from "../../assets/img/aboutmeTitle.webp";
 import frise from "../../assets/img/frise.webp";
 import BackgroundImage from "../../assets/img/poisson.webp";
 
@@ -61,37 +61,55 @@ export const AboutMe = () => {
             alignItems: "center",
           }}
         >
+          
           <img
             alt="about me"
             src={AboutMeTitle}
             width={
               window.innerHeight < window.innerWidth
                 ? window.innerWidth * 0.3
-                : window.innerWidth * 0.6
+                : window.innerWidth * 0.75
             }
           />
-
+          <div style={{position: "relative"}}>
+          <div
+          style={{
+            position: "absolute",
+            top: "-1%",
+            left: "-5%",
+            height: "102%",
+            width:"110%",
+            backgroundColor: "#F5CFC944",
+            borderRadius: 5,
+            // border: "2px solid #8C685E44",
+            // transform: "rotate(2.5deg)"
+          }}/>
+            <p style={{alignSelf: "center", textAlign:"center", fontWeight: 500, fontSize: 20}}><strong>Je m'appelle Adèle, bienvenue dans mon portfolio!</strong></p>
           <div
             style={{
+              position:"relative",
               alignSelf: "center",
               overflowWrap: "break-word",
               fontSize: window.innerHeight > window.innerWidth ? 17 : 20,
+              textIndent: 30,
+              textAlign: "justify"
             }}
           >
-            <p>Bienvenue dans mon portfolio!</p>
-            <p>
-              Je m'appelle Adèle Fontanaud, et je suis diplômée d'un Bachelor en communication, obtenu à Angoulême en septembre 2024.
+            
+            {/* <p>Bienvenue dans mon portfolio!</p> */}
+            <p style={{margin: 0}}>
+              {"   "}Je suis diplômée d'un <strong>Bachelor en communication</strong>, obtenu à Angoulême en septembre 2024.
             </p>
             <p>
               Cette formation m’a permis d’acquérir des compétences variées, 
-              telles que la maîtrise des logiciels de la suite Adobe, 
-              ainsi que des connaissances en marketing. J’ai 
+              telles que la maîtrise des logiciels de la <strong>suite Adobe</strong>, 
+              ainsi que des connaissances en <strong>marketing</strong>. J’ai 
               également eu la chance de mettre en pratique mes 
               acquis lors de mon alternance, que je poursuis actuellement 
-              en Master au sein du groupe Vinci Énergie. Cette expérience 
-              m’a permis de me former à WordPress et de développer des 
-              compétences dans des domaines tels que l’événementiel, 
-              la création de contenu sur LinkedIn, et la création visuelle.
+              en Master au sein du groupe <strong>Vinci Énergies</strong>. Cette expérience 
+              m’a permis de me former à <strong>WordPress</strong> et de développer des 
+              compétences dans des domaines tels que l’<strong>événementiel</strong>, 
+              la <strong>création de contenu</strong> sur LinkedIn, et la <strong>création visuelle</strong>.
             </p>
             {/* <p>
               Après avoir validé ce diplôme, j'ai passé une année en tant
@@ -99,13 +117,16 @@ export const AboutMe = () => {
               dorénavant trouver un travail dans lequel je pourrai m'épanouir.
             </p> */}
             <p>
-            Ce que j’aime le plus, c’est exprimer ma créativité à travers des projets divers, qu’ils soient professionnels ou personnels.
+            Ce que j’aime le plus, c’est <strong>exprimer ma créativité</strong> à travers des projets divers, qu’ils soient professionnels ou personnels.
             </p>
             <div style={{width: "100%", display:"flex", justifyContent:"center"}}>
+        </div>
+        </div>
+          </div>
             <Button
               variant="outlined"
               aria-label="Me contacter"
-              style={{ color: "pink", borderColor: "#8C685E"}}
+              style={{ color: "pink", borderColor: "#8C685E", marginTop: 30, fontSize: 17}}
               onClick={() => {
                 const anchor = document.getElementById("contact");
                 if (anchor) {
@@ -114,8 +135,6 @@ export const AboutMe = () => {
             >
           N'hésitez pas à me contacter
         </Button>
-        </div>
-          </div>
         </div>
 
         {/* Frise chronologique */}
@@ -339,7 +358,7 @@ export const AboutMe = () => {
                   </div>
                 </div>
 
-                {/* VINCI Energies (alternance) */}
+                {/* VINCI Energies */}
                 <div
                   className="shadow-portfolio"
                   style={{
@@ -362,7 +381,7 @@ export const AboutMe = () => {
                       margin: 0,
                     }}
                   >
-                    VINCI Energies<br/>(alternance)
+                    VINCI Energies
                   </p>
                   <div style={{ paddingInline: 20, paddingBottom: 10 }}>
                     <p>

@@ -1,56 +1,56 @@
-import { Button, IconButton, Modal, Slide, Slider } from "@mui/material";
+import { Button, IconButton, Modal } from "@mui/material";
 import { useEffect, useState } from "react";
 import "./App.css";
 
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
+import BackgroundImage2 from "./assets/img/poisson.webp";
 import portfolioTitle from "./assets/img/portfolio.webp";
 import { AboutMe } from "./components/AboutMe/aboutme";
 import { Contact } from "./components/Contact/contact";
 import { Header } from "./components/Header/header";
-import { Skills } from "./components/Skills/skills";
 import { Portfolio } from "./components/Portfolio/portfolio";
-import BackgroundImage2 from "./assets/img/poisson.webp";
+import { Skills } from "./components/Skills/skills";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Pagination } from "swiper/modules";
 import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // portfolio1
 import Banniere from "./assets/img/banniere.webp";
-import Totoro from "./assets/img/perso/Totoro.webp";
-import ThreshImage from "./assets/img/perso/Thresh.webp";
-import DIYSImage from "./assets/img/perso/DIYS.jpg";
-import Hwasa from "./assets/img/perso/hwasa.jpg";
-import Fille from "./assets/img/perso/fille.jpg";
-import Jenie from "./assets/img/perso/jenie.jpg";
-import Rousse from "./assets/img/perso/Rousse.webp";
-import Fille2 from "./assets/img/perso/fille2.jpg";
-import Nayeon from "./assets/img/perso/Nayeon.webp";
+import DIYSImage from "./assets/img/perso/DIYS.webp";
 import Luca from "./assets/img/perso/Luca.webp";
-import Bibliotheque from "./assets/img/perso/bibliotheque.jpg";
-import TheOffice from "./assets/img/perso/TheOffice.webp";
 import Moi from "./assets/img/perso/Moi.webp";
+import Nayeon from "./assets/img/perso/Nayeon.webp";
+import Rousse from "./assets/img/perso/Rousse.webp";
+import TheOffice from "./assets/img/perso/TheOffice.webp";
+import ThreshImage from "./assets/img/perso/Thresh.webp";
+import Totoro from "./assets/img/perso/Totoro.webp";
+import Bibliotheque from "./assets/img/perso/bibliotheque.webp";
+import Fille from "./assets/img/perso/fille.webp";
+import Fille2 from "./assets/img/perso/fille2.webp";
+import Hwasa from "./assets/img/perso/hwasa.webp";
+import Jenie from "./assets/img/perso/jenie.webp";
 
 // portfolio2
-import CreartistesMarathon from "./assets/img/pro/cre_marathon.png";
-import CreartistesNoel from "./assets/img/pro/Cre_Noel.png";
-import CreartistesImg from "./assets/img/pro/Cre_artiste.png";
-import CreartistesHoraires from "./assets/img/pro/Cre_horaire.png";
-import CreartistesInsta from "./assets/img/pro/Cre_insta.png";
-import StudioCarte1 from "./assets/img/pro/studio_carte_visite.png";
-import StudioPrestations from "./assets/img/pro/studio_prestations.png";
-import StudioCarte2 from "./assets/img/pro/Studio_Carte_visite2.png";
-import StudioSignature from "./assets/img/pro/Studio_Signature.png";
-import StudioHoraires from "./assets/img/pro/Studio_horaire.png";
-import StudioMariage from "./assets/img/pro/Studio_mariage.png";
-import IEP from "./assets/img/pro/plaquette-iep.png"
-import Kakemono from "./assets/img/pro/kakemono.png"
-import Ville from "./assets/img/pro/villeconnectee.png"
-import Carte from "./assets/img/pro/map.png"
+import CreartistesNoel from "./assets/img/pro/Cre_Noel.webp";
+import CreartistesImg from "./assets/img/pro/Cre_artiste.webp";
+import CreartistesHoraires from "./assets/img/pro/Cre_horaire.webp";
+import CreartistesInsta from "./assets/img/pro/Cre_insta.webp";
+import StudioCarte2 from "./assets/img/pro/Studio_Carte_visite2.webp";
+import StudioSignature from "./assets/img/pro/Studio_Signature.webp";
+import StudioHoraires from "./assets/img/pro/Studio_horaire.webp";
+import StudioMariage from "./assets/img/pro/Studio_mariage.webp";
+import CreartistesMarathon from "./assets/img/pro/cre_marathon.webp";
+import Kakemono from "./assets/img/pro/kakemono.webp";
+import Carte from "./assets/img/pro/map.webp";
+import IEP from "./assets/img/pro/plaquette-iep.webp";
+import StudioCarte1 from "./assets/img/pro/studio_carte_visite.webp";
+import StudioPrestations from "./assets/img/pro/studio_prestations.webp";
+import Ville from "./assets/img/pro/villeconnectee.webp";
+import { SitesMockups } from "./components/SitesMockups/sitesMockups";
 
 export interface IImage {
   img: string;
@@ -122,6 +122,7 @@ function App() {
             onClick={() =>
               window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
             }
+            aria-label="scroll to content"
             size="medium"
             style={{
               position: "absolute",
@@ -241,7 +242,7 @@ function App() {
           color="pink"
           spaceBetween={30}
           onSwiper={setSwiperRef}
-          style={{backgroundColor:"white"}}
+          style={{backgroundColor:"white", height: "auto"}}
         >
           <SwiperSlide virtualIndex={1}>
             <Portfolio
@@ -255,19 +256,25 @@ function App() {
             <Portfolio
               itemData={portfolioCreartiste}
               setDisplayImage={setDisplayImage}
-              itemLimit={5}
+              itemLimit={window.innerHeight < window.innerWidth ? 5 : 2}
             />
           </SwiperSlide>
           <SwiperSlide virtualIndex={3}>
             <Portfolio
               itemData={portfolioStudio}
               setDisplayImage={setDisplayImage}
-              itemLimit={5}
+              itemLimit={window.innerHeight < window.innerWidth ? 5 : 3}
             />
           </SwiperSlide>
         </Swiper>
       </div>
-
+      
+        <SitesMockups
+          // title="♡ Quelques-unes de mes créations ♡"
+          // itemData={portfolioPerso}
+          // setDisplayImage={setDisplayImage}
+          // itemLimit={5}
+        />
       <div
         style={{
           backgroundImage: `url(${BackgroundImage2})`,
@@ -323,6 +330,7 @@ function App() {
       {window.scrollY >= window.innerHeight && (
         <IconButton
           size="medium"
+          aria-label="scroll to top"
           style={{
             position: "fixed",
             bottom: 30,
